@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.imf.org/SDMX" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.imf.org/SDMX" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.imf.org/SDMX/Imports">
+      <xsd:import schemaLocation="http://dataservices.imf.org/sdmx20/SDMX_WCF_Service.svc?xsd=xsd0" namespace="http://www.imf.org/SDMX" />
+      <xsd:import schemaLocation="http://dataservices.imf.org/sdmx20/SDMX_WCF_Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISDMXService_GetCodeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCodeList" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetCodeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCodeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetDataflow_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataflow" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetDataflow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetCompactData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompactData" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetCompactData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompactDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetMetadataStructure_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetadataStructure" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetMetadataStructure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMetadataStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetGenericMetadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenericMetadata" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetGenericMetadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenericMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetMaxSeriesInResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxSeriesInResult" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetMaxSeriesInResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxSeriesInResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetDataStructure_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataStructure" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetDataStructure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataStructureResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetServiceVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceVersion" />
+  </wsdl:message>
+  <wsdl:message name="ISDMXService_GetServiceVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceVersionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISDMXService">
+    <wsdl:operation name="GetCodeList">
+      <wsdl:input wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetCodeList" message="tns:ISDMXService_GetCodeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetCodeListResponse" message="tns:ISDMXService_GetCodeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataflow">
+      <wsdl:input wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetDataflow" message="tns:ISDMXService_GetDataflow_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetDataflowResponse" message="tns:ISDMXService_GetDataflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompactData">
+      <wsdl:input wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetCompactData" message="tns:ISDMXService_GetCompactData_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetCompactDataResponse" message="tns:ISDMXService_GetCompactData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetadataStructure">
+      <wsdl:input wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetMetadataStructure" message="tns:ISDMXService_GetMetadataStructure_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetMetadataStructureResponse" message="tns:ISDMXService_GetMetadataStructure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenericMetadata">
+      <wsdl:input wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetGenericMetadata" message="tns:ISDMXService_GetGenericMetadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetGenericMetadataResponse" message="tns:ISDMXService_GetGenericMetadata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxSeriesInResult">
+      <wsdl:input wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetMaxSeriesInResult" message="tns:ISDMXService_GetMaxSeriesInResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetMaxSeriesInResultResponse" message="tns:ISDMXService_GetMaxSeriesInResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataStructure">
+      <wsdl:input wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetDataStructure" message="tns:ISDMXService_GetDataStructure_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetDataStructureResponse" message="tns:ISDMXService_GetDataStructure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceVersion">
+      <wsdl:input wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetServiceVersion" message="tns:ISDMXService_GetServiceVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.imf.org/SDMX/ISDMXService/GetServiceVersionResponse" message="tns:ISDMXService_GetServiceVersion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

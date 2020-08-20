@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.imf.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/webservices/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SDMXService" targetNamespace="http://www.imf.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://www.sdmx.org/resources/sdmxml/schemas/v2_1/webservices/" location="http://dataservices.imf.org/sdmx20/SDMX_WCF_Service.svc?wsdl=wsdl1" />
+  <wsdl:types />
+  <wsdl:service name="SDMXService">
+    <wsdl:port name="BasicHttpBinding_ISDMXService" binding="i0:BasicHttpBinding_ISDMXService">
+      <soap:address location="http://dataservices.imf.org/sdmx20/SDMX_WCF_Service.svc/service" />
+    </wsdl:port>
+    <wsdl:port name="CustomBinding_ISDMXService" binding="i0:CustomBinding_ISDMXService">
+      <soap12:address location="http://dataservices.imf.org/sdmx20/SDMX_WCF_Service.svc/service12" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

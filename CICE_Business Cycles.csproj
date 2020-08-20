@@ -365,16 +365,6 @@
     <None Include="Resources\lifesaver.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Controllers\Controllers.csproj">
-      <Project>{80b22e39-200b-49f0-be06-169cef73a8b6}</Project>
-      <Name>Controllers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{c9120c28-8067-4a79-a616-126a3b3a4927}</Project>
-      <Name>Models</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="ida Economía.ico" />
     <Content Include="Imagenes\ida Economía.ico" />
     <Content Include="Model\BD_Cice.Context.tt">
@@ -404,7 +394,24 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="Controllers\Controllers.csproj">
+      <Project>{80b22e39-200b-49f0-be06-169cef73a8b6}</Project>
+      <Name>Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="FMI\FMI.csproj">
+      <Project>{9272b0ed-386a-4a0f-93cf-56d679148fae}</Project>
+      <Name>FMI</Name>
+    </ProjectReference>
+    <ProjectReference Include="INEGI\INEGI.csproj">
+      <Project>{3ebd198d-c771-4530-a843-30ed05ae66b0}</Project>
+      <Name>INEGI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Models\Models.csproj">
+      <Project>{c9120c28-8067-4a79-a616-126a3b3a4927}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
